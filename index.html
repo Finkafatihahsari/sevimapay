@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html>
 <head>
 	<title>Sevimapay</title>
-	<link href="css/style.css" rel="stylesheet" media="screen">
- 	<link href="color/default.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
+  <link href="color/default.css" rel="stylesheet" media="screen">
+  <script src="js/modernizr.custom.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
 	<div class="menu-area">
@@ -14,10 +16,11 @@
 	        <li>
 	          <a href="#intro">Home</a>
 	        </li>
-	        <li><a href="#about">Ringkasan</a></li>
+	        <li><a href="#about">Tentang Produk</a></li>
 	        <li><a href="#services">Keuntungan</a></li>
 	        <li><a href="#works">Portofolio</a></li>
 	        <li><a href="#contact">Contact</a></li>
+          <li><a href="#partner">Partner</a></li>
 	      </ul>
 		</div>
 	</div>
@@ -43,24 +46,32 @@
   <section id="about" class="home-section bg-white">
     <div class="container">
       <div class="row">
-	        <div class="col-md-offset-2 col-md-8">
 	          <div class="section-heading">
-	            <h2>Ringkasan</h2>
-	            <h4>Sevimapay, Membuat Pembayaran Kuliah Anda Lebih Mudah</h4>
+	            <h2>Sevimapay</h2>
+              <p>Beberapa Masalah Pembayaran yang sering terjadi di Perguruan Tinggi</p>
+               <img src="img/about/problem.png" >
+	            
 	          </div>
 	        </div>
-	      </div>
-	      <div class="row">
-	        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-	          <div class="box-team wow bounceInDown" data-wow-delay="0.1s">
-	            <img src="img\about\latarbelakang.jpg" alt="" class="img-responsive" />
-	            <img src="img\about\2.jpg" alt="" class="img-responsive" />
-	          </div>
-	        </div>
-	  </div>
+        </div>
+          <div class="col-md-6" align="left" id="chartContainer" style="display: block; height: 210px; width: 520px;"></div>
+          <br>
+        </div>
+  
+        <div class="col-md-6">   
+          <ul class="check-benefit" align="left">
+              <h6>Solusi Pembayaran Bagi Perguruan Tinggi Anda</h6>
+              <li>Terintegrasi dengan Data Tagihan yang dihasilkan dari SIM Akademik Universitas</li>
+              <li>Pembayaran bisa dilakukan Instant dalam hitungan Detik</li>
+              <li>Kontrol Panel yang intuitif dan menampilkan tagihan dan pembayaran mahasiswa secara Realtime</li>
+              <li>Laporan yang lengkap dan akurat</li>
+              <li>Dana langsung masuk ke Rekening Universitas Aman dan Terjamin</li>
+          </ul>
+        </div> 
+	   </div>
     </div>
-  </section>
-
+    </section>
+    
 <!-- Services -->
   <section id="services" class="home-section bg-white">
     <div class="container">
@@ -75,43 +86,57 @@
     <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
           <div class="service-box wow bounceInDown" data-wow-delay="0.1s">
-            <i class="fa fa-code fa-4x"></i>
+            <i class="	fa fa-money fa-4x"></i>
             <h4>Teller Bank</h4>
-            <a href="#" class="btn btn-primary">Learn more</a>
+            <a href="teller.html" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
           <div class="service-box wow bounceInDown" data-wow-delay="0.1s">
-            <i class="fa fa-code fa-4x"></i>
+            <i class="fa fa-credit-card fa-4x"></i>
             <h4>ATM</h4>
-            <a href="#" class="btn btn-primary">Learn more</a>
+            <a href="atm.html" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
           <div class="service-box wow bounceInDown" data-wow-delay="0.1s">
-            <i class="fa fa-code fa-4x"></i>
+            <i class="	fa fa-mobile-phone fa-4x"></i>
             <h4>Mobile Banking</h4>
-            <a href="#" class="btn btn-primary">Learn more</a>
+            <a href="mobile.html" class="btn btn-primary">Learn more</a>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
           <div class="service-box wow bounceInDown" data-wow-delay="0.1s">
-            <i class="fa fa-code fa-4x"></i>
+            <i class="fa fa-laptop fa-4x"></i>
             <h4>Internet Banking</h4>
-            <a href="#" class="btn btn-primary">Learn more</a>
+            <a href="internet.html" class="btn btn-primary">Learn more</a>
           </div>
         </div>
     </div>
   </section>
 
+  <!-- spacer -->
+  <section id="spacer1" class="home-section spacer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="color-light">
+            <h2 class="wow bounceInDown" data-wow-delay="1s">SevimaPay Supporting Better Payment For Education</h2>
+            <p class="lead wow bounceInUp" data-wow-delay="2s">Everywhere, Everytime</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Works -->
-  <section id="works" class="home-section bg-gray">
+  <section id="works" class="home-section bg-white">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
             <h2>Portofolio</h2>
-            <p>Produk SevimaPay telah digunakan diberbagai institusi di seluruh Indonesia.</p>
+            <p>Beberapa Perguruan Tinggi Yang Telah Berkerjasama dengan SevimaPay</p>
           </div>
         </div>
       </div>
@@ -120,14 +145,85 @@
 
           <ul class="lb-album">
             <li>
-            <a href="#image-1">
-				<img src="img/works/thumbs/1.jpg" alt="">
-				<span>+</span>
-			</a>
-            <div class="lb-overlay" id="image-1">
-            	<a href="#page" class="lb-close">X</a>
-            	<img src="img/works/1.jpg" alt="" />
-            </div>
+              <a href="#image-1">
+                <img src="img/works/thumbs/1.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-1">
+                <a href="#page" class="lb-close">X</a>
+                <img src="img/works/1.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-2">
+                <img src="img/works/thumbs/2.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-2">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/2.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-3">
+                <img src="img/works/thumbs/3.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-3">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/3.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-4">
+                <img src="img/works/thumbs/4.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-4">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/4.jpg" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <a href="#image-5">
+                <img src="img/works/thumbs/5.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-5">
+                <a href="#page" class="lb-close">X</a>
+                <img src="img/works/5.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-6">
+                <img src="img/works/thumbs/6.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-6">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/6.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-7">
+                <img src="img/works/thumbs/7.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-7">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/7.jpg" alt="" />
+              </div>
+            </li>
+            <li>
+              <a href="#image-8">
+                <img src="img/works/thumbs/8.jpg" alt="">
+                <span>+</span>
+              </a>
+              <div class="lb-overlay" id="image-8">
+                <a href="#page" class="lb-close">x Close</a>
+                <img src="img/works/8.jpg" alt="" />
+              </div>
             </li>
           </ul>
 
@@ -137,7 +233,7 @@
   </section>
   
   <!-- Contact -->
-  <section id="contact" class="home-section bg-white">
+  <section id="contact" class="home-section bg-gray">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
@@ -145,17 +241,49 @@
             <h2>Kontak Kami</h2>
             <p>Sesuai komitmen kami dalam memberikan layanan yang unggul dan profesional untuk Anda, Sevimapay memastikan bahwa informasi apapun yang Anda butuhkan segera terlayani hanya dengan menghubungi kami melalui telepon, e-mail, dan media sosial kami. </p>
           </div>
+          <button data-type="show" id="show" class="btn btn-primary">Form Kontak</button>
+          <div id="form-kontak">
+            
+          </div>
+          <div class="row">
+          
+           <form method="get" role="form" class="contactForm" hidden="">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center">
+            <input type="button" onclick="submit()" value="Send Message"  class="btn btn-theme btn-lg btn-block"></div>
+          </form>
+
         </div>
       </div>
+      </section>
 
-      <div class="row mar-top30 ">
-        <div class="col-md-offset-2 col-md-8">
-          <h5>Sosial Media</h5>
-          <ul class="social-network">
-          </ul>
-        </div>
+  <!--partner-area-->
+  <section id="partner" class="home-section bg-white">
+    <div class="container">
+      <div class="col-md-12">
+          <div class="box-team wow bounceInDown" data-wow-delay="0.1s" >
+            <br>
+            <h2>Our Partner</h2>
+            <p>Sevimapay saat ini telah bekerjasama dengan beberapa Instansi, dan pastinya akan terus bertambah!</p>
+            <br>
+            <img src="img/about/bank.png" >
+          </div>
       </div>
-
     </div>
   </section>
 
@@ -163,11 +291,100 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p>&copy; Finka Fatihahsari</p>
+          <p>&copy; Sevimapay</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- js -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.smooth-scroll.min.js"></script>
+  <script src="js/jquery.dlmenu.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      $("[data-type='show']").click(function(){
+          $('#form-kontak').append($('.contactForm').clone().show());
+          $('#show').hide();
+        });
+      tampil();
+    });
+
+    function submit(){
+      var nama = $('#form-kontak #name').val();
+      var email = $('#form-kontak #email').val();
+      var subject = $('#form-kontak #subject').val();
+      var pesan = $('#form-kontak #message').val();
+
+      if (nama == ''){
+        alert('Nama Tidak Boleh Kosong');
+      }  else  if (email == ''){
+        alert('Email Tidak Boleh Kosong');
+      }  else  if (subject == ''){
+        alert('Subject Tidak Boleh Kosong');
+      }  else if (pesan == ''){
+        alert('Pesan Tidak Boleh Kosong');
+      }  else {
+        $('#form-kontak').submit();
+      }
+    }
+
+    function tampil(){
+
+      var nama = getQueryVariable("name");
+      var email = getQueryVariable("email");
+      var subject = getQueryVariable("subject");
+      var pesan = getQueryVariable("message");
+
+      if(nama===undefined && email===undefined && subject===undefined && pesan===undefined){
+        var kosong;
+      }else if (nama != '' && email != '' && subject != '' && pesan != ''){
+        alert('Nama : ' + nama + '\nEmail :' + email + '\nSubject :' + subject + '\nPesan :' + pesan);
+      }
+    }
+
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      } 
+      // return variable;
+    }
+  </script>
+
+    <script>
+  window.onload = function() {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title: {
+      text: "Quick Fact - Pembayaran Kuliah"
+    },
+    data: [{
+      type: "pie",
+      startAngle: 240,
+      yValueFormatString: "##0.00\"%\"",
+      indexLabel: "{label} {y}",
+      dataPoints: [
+        {y: 30, label: "Via Bank"},
+        {y: 70, label: "Pembayaran Tunai"}
+      ]
+    }]
+  });
+  chart.render();
+
+  }
+  </script>
+
 
 </body>
 </html>

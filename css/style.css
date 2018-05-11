@@ -1,4 +1,15 @@
+/* ================================
+Imports
+================================= */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,700,800);
+@import url('font-awesome.min.css');
+@import url('overwrite.css');
+@import url('dlmenu.css');
+@import url('animate.css');
 
+/* ================================
+General
+================================= */
 body{
 	margin:0;
 	padding:0;
@@ -150,6 +161,18 @@ Home sections
 
 .color-light p {
 	color: #eee;
+}
+
+
+/* ==========================
+Spacer
+============================= */
+
+#spacer1{	
+	background-image: url(../img/spacer/1.jpg);
+}
+#spacer2{	
+	background-image: url(../img/spacer/2.jpg);
 }
 
 
@@ -476,6 +499,10 @@ Works
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
 x:-o-prefocus, .lb-overlay img {
     height: 100%;
 }
@@ -544,6 +571,8 @@ footer {
 	color: #ddd;
 	padding: 50px 0 30px;
 }
+
+
 /* ================================
 more media queries
 ================================= */
@@ -580,4 +609,61 @@ more media queries
 	#intro{
 		background-image: none;
 	}
+}
+
+/*
+Test
+*/
+.cd-horizontal-timeline .events-content {
+  position: relative;
+}
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, 
+.cd-horizontal-timeline .events-content li.leave-right {
+  animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, 
+.cd-horizontal-timeline .events-content li.leave-left {
+  animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, 
+.cd-horizontal-timeline .events-content li.leave-left {
+  animation-direction: reverse;
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
